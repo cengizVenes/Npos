@@ -341,12 +341,12 @@ textarea {
   gap: 25px;
   margin-top: 40px;
 }
-.header .logo, .header .headerMenu {
+.header .logo, .header .mobilMenu, .header .headerMenu {
   background-color: #0c0c0c;
   padding: 20px;
   border-radius: 20px;
 }
-.header .logo img, .header .headerMenu img {
+.header .logo img, .header .mobilMenu img, .header .headerMenu img {
   width: 40px;
   height: 40px;
 }
@@ -383,7 +383,7 @@ textarea {
 .yellowButton, .footerMenu .contact .contactSection div:nth-child(2) .whiteButton, .stickButton {
   display: inline-block;
   color: #0c0c0c;
-  font-size: 18px;
+  font-size: clamp(12px, 1.8vw, 18px);
   font-weight: 500;
   border: none;
   letter-spacing: 1px;
@@ -437,7 +437,7 @@ textarea {
 .littleNote span {
   margin-left: 15px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: clamp(12px, 1.8vw, 18px);
   letter-spacing: 1px;
 }
 
@@ -447,7 +447,7 @@ textarea {
 }
 .manageStoreText h2 {
   max-width: 90%;
-  font-size: 70px;
+  font-size: clamp(20px, 4vw, 70px);
   line-height: 1.2;
   position: relative;
   color: #0c0c0c;
@@ -472,10 +472,10 @@ textarea {
 
 .description {
   text-align: center;
-  margin: 200px 200px 150px 85px;
+  margin: 200px 142px 150px 142px;
 }
 .description h3 {
-  font-size: 42px;
+  font-size: clamp(20px, 2.5vw, 45px);
   line-height: 1.2;
   color: #0c0c0c;
   letter-spacing: 2px;
@@ -505,8 +505,8 @@ textarea {
 }
 .transformStore h2 {
   color: #fff;
-  letter-spacing: 15px;
-  font-size: 70px;
+  letter-spacing: 1vw;
+  font-size: clamp(30px, 3vw, 70px);
   max-width: 1000px;
   line-height: 1.2;
 }
@@ -567,19 +567,21 @@ textarea {
 }
 .transformStoreCarts .cart .cartBody h3 {
   color: #fff;
-  font-size: 35px;
+  font-size: clamp(18px, 2vw, 35px);
   letter-spacing: 3px;
 }
 .transformStoreCarts .cart .cartBody p {
   color: #b8b8b8;
   margin: 20px 0 0 0;
   line-height: 1.2;
+  font-size: clamp(14px, 1.6vw, 21px);
 }
 
 .advantage .advantageCard4, .advantage .advantageCard3, .advantage .advantageCard2, .advantage .advantageCard1 {
   border-radius: 20px;
   padding: 50px;
   background-color: #ff6b63;
+  max-width: 400px;
 }
 .advantage .advantageCard4 p, .advantage .advantageCard3 p, .advantage .advantageCard2 p, .advantage .advantageCard1 p {
   color: #fff;
@@ -700,7 +702,7 @@ textarea {
   text-align: center;
 }
 
-.footerMenu .contact .contactSection div:last-child, .footerMenu .contact .contactSection div:nth-child(2), .footerMenu .ready, .faq .faqHeader, .innovation div:last-child, .innovation div:nth-child(2), .innovation div:first-child, .header .logo, .header .headerMenu, .header .headerMenu .menuRight, .manageStoreImg, .littleNote div, .transformStoreCarts .cart .cartHeader div {
+.footerMenu .contact .contactSection div:last-child, .footerMenu .contact .contactSection div:nth-child(2), .footerMenu .ready, .faq .faqHeader, .innovation div:last-child, .innovation div:nth-child(2), .innovation div:first-child, .header .logo, .header .mobilMenu, .header .headerMenu, .header .headerMenu .menuRight, .manageStoreImg, .littleNote div, .transformStoreCarts .cart .cartHeader div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -728,11 +730,14 @@ textarea {
 .innovation div:nth-child(2) a:first-child {
   margin-right: 40px;
 }
+.innovation div:last-child img {
+  width: 100%;
+}
 .innovation h2 {
   max-width: 1090px;
   text-align: center;
   color: #fff;
-  font-size: 70px;
+  font-size: clamp(30px, 4vw, 70px);
   letter-spacing: 10px;
 }
 
@@ -766,9 +771,10 @@ textarea {
   background-color: transparent;
 }
 .faq .accordion .accordionHeader h3 {
-  font-size: 25px;
+  font-size: clamp(16px, 2.5vw, 25px);
   letter-spacing: 1px;
   position: relative;
+  padding-right: 30px;
 }
 .faq .accordion .accordionHeader h3::after {
   content: "";
@@ -798,7 +804,7 @@ textarea {
 }
 .faq .accordion .accordionBody p {
   padding-top: 40px;
-  font-size: 20px;
+  font-size: clamp(12px, 2.5vw, 20px);
   line-height: 1.2;
   color: #0c0c0c;
 }
@@ -806,7 +812,7 @@ textarea {
 .footerMenu .socialMedia, .footerMenu .contact, .footerMenu .pageLinks, .footerMenu .ready {
   background-color: #0c0c0c;
   border-radius: 20px;
-  padding: 40px;
+  padding: 30px;
   color: #fff;
 }
 
@@ -821,13 +827,13 @@ textarea {
   margin-bottom: 96px;
 }
 .footerMenu .ready {
-  max-width: 400px;
+  max-width: 500px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 20px;
+  gap: 30px;
 }
 .footerMenu .ready div:first-child {
   width: calc(30% - 20px);
@@ -842,7 +848,7 @@ textarea {
   width: calc(70% - 20px);
 }
 .footerMenu .ready div:nth-child(2) h2 {
-  font-size: 38px;
+  font-size: clamp(18px, 2.5vw, 38px);
   letter-spacing: 5px;
   line-height: 1.2;
 }
@@ -863,9 +869,15 @@ textarea {
   padding: 15px 0;
   text-align: center;
 }
+.footerMenu .pageLinks li:first-child {
+  padding-top: 0;
+}
+.footerMenu .pageLinks li:last-child {
+  padding-bottom: 0;
+}
 .footerMenu .pageLinks li a {
   color: #fff;
-  font-size: 18px;
+  font-size: clamp(12px, 2.5vw, 18px);
   letter-spacing: 1px;
 }
 .footerMenu .contact {
@@ -881,7 +893,7 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 640px;
+  max-width: 700px;
 }
 .footerMenu .contact .contactSection {
   display: -webkit-box;
@@ -901,14 +913,14 @@ textarea {
   width: calc(60% - 20px);
 }
 .footerMenu .contact .contactSection div:first-child h2 {
-  font-size: 50px;
+  font-size: clamp(20px, 2.5vw, 50px);
   letter-spacing: 5px;
   margin-bottom: 20px;
 }
 .footerMenu .contact .contactSection div:first-child p {
   color: #868686;
   max-width: 315px;
-  font-size: 17px;
+  font-size: clamp(12px, 2.5vw, 16px);
   line-height: 1.3;
   letter-spacing: 1px;
 }
@@ -931,6 +943,7 @@ textarea {
 }
 .footerMenu .contact .contactSection div:last-child a {
   color: #ffd266;
+  font-size: clamp(12px, 2.5vw, 16px);
 }
 .footerMenu .contact .linkSection {
   background-color: #0c0c0c;
@@ -950,7 +963,7 @@ textarea {
 }
 .footerMenu .contact .linkSection ul a {
   color: #fff;
-  font-size: 18px;
+  font-size: clamp(14px, 2.5vw, 18px);
   letter-spacing: 1px;
 }
 .footerMenu .socialMedia ul {
@@ -975,4 +988,333 @@ textarea {
 .footerMenu .socialMedia a img {
   max-width: 20px;
   max-height: 20px;
+}
+
+.mobilMenu {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .littleNote div {
+    width: 55px;
+    height: 55px;
+  }
+  .reference div img {
+    padding: 0 20px;
+  }
+  .footerMenu {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footerMenu .ready {
+    max-width: calc(40% - 20px);
+    width: 100%;
+  }
+  .footerMenu .pageLinks {
+    max-width: calc(60% - 20px);
+    width: 100%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .footerMenu .pageLinks ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .footerMenu .pageLinks ul li {
+    padding: 0 20px;
+  }
+  .footerMenu .pageLinks ul li a {
+    line-height: 0;
+  }
+  .footerMenu .socialMedia {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .footerMenu .socialMedia ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footerMenu .socialMedia ul li {
+    padding: 0 20px;
+  }
+  .footerMenu .contact {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+@media (max-width: 1200px) {
+  .manageStoreImg div {
+    width: 80%;
+  }
+  .description {
+    margin: 150px 142px;
+  }
+  h2 .littleNote {
+    margin-left: 35px !important;
+    margin-top: 5px !important;
+  }
+  .transformStoreCarts .cart {
+    max-width: 50%;
+    width: 100%;
+  }
+  .transformStoreCarts .cart:last-child {
+    margin-top: -100px;
+    max-height: 500px;
+  }
+  .transformStoreCarts img {
+    width: 75%;
+  }
+  .transformStore p {
+    max-width: 550px;
+    font-size: 15px;
+    margin: 30px 0;
+  }
+  .transformStore h2 {
+    max-width: 80%;
+  }
+  .advantage .advantageTitle h2 {
+    font-size: 35px;
+  }
+  .advantage .advantageDesc {
+    padding: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .advantage .advantageDesc p {
+    font-size: 14px;
+    margin: 0;
+  }
+  .advantage .advantageCard1, .advantage .advantageCard2, .advantage .advantageCard3, .advantage .advantageCard4 {
+    padding: 35px;
+  }
+  .advantage .advantageCard1 div:first-child, .advantage .advantageCard2 div:first-child, .advantage .advantageCard3 div:first-child, .advantage .advantageCard4 div:first-child {
+    padding: 20px !important;
+  }
+  .advantage .advantageCard1 div:first-child img, .advantage .advantageCard2 div:first-child img, .advantage .advantageCard3 div:first-child img, .advantage .advantageCard4 div:first-child img {
+    max-width: 20px !important;
+    max-height: 20px !important;
+  }
+  .advantage .advantageCard1 div:last-child span, .advantage .advantageCard2 div:last-child span, .advantage .advantageCard3 div:last-child span, .advantage .advantageCard4 div:last-child span {
+    font-size: 50px !important;
+  }
+  .advantage .advantageCard1 p, .advantage .advantageCard2 p, .advantage .advantageCard3 p, .advantage .advantageCard4 p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) {
+  .transformStoreCarts {
+    margin-top: 45px;
+  }
+  .transformStoreCarts .cart:last-child {
+    max-height: 440px !important;
+  }
+  .transformStore {
+    padding: 50px;
+  }
+  .cart .cartBody {
+    margin-top: 40px !important;
+  }
+  .cart .cartHeader::after {
+    width: 75% !important;
+    bottom: -15px !important;
+  }
+  .littleNote div {
+    max-width: 45px;
+    max-height: 45px;
+  }
+  .littleNote div img {
+    max-width: 15px;
+  }
+  h2 .littleNote {
+    margin-left: 10px !important;
+    margin-top: 0 !important;
+  }
+  .container {
+    padding: 0 24px;
+  }
+  .advantage {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2];
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .advantage > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .advantage > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .advantage > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .advantage > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .headerMenu {
+    display: none !important;
+  }
+  .mobilMenu {
+    display: block;
+  }
+  .description {
+    margin: 100px 32px;
+  }
+}
+@media (max-width: 768px) {
+  .faq {
+    padding: 50px 20px 0;
+  }
+  .faq .faqBody {
+    margin: 40px 0;
+  }
+  .accordion .accordionHeader {
+    padding: 25px 0 !important;
+  }
+  .accordion .accordionHeader h3::after {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .accordion .accordionBody p {
+    padding: 25px 6px 0 !important;
+  }
+  .transformStoreCarts {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 25px;
+  }
+  .transformStoreCarts .cart {
+    width: 70%;
+  }
+  .transformStoreCarts .cart:last-child {
+    margin: 0;
+  }
+  .manageStoreText {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  .yellowButton, .stickButton, .footerMenu .contact .contactSection div:nth-child(2) .whiteButton {
+    padding: 15px 25px;
+  }
+  .manageStore {
+    margin-top: 40px;
+  }
+  .manageStoreButtons {
+    margin-top: 25px !important;
+  }
+  .description {
+    margin: 75px 32px;
+  }
+}
+@media (max-width: 567px) {
+  .littleNote div {
+    max-width: 40px;
+    max-height: 40px;
+  }
+  .manageStore {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .manageStore .manageStoreText {
+    margin: 0;
+    max-width: 265px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .manageStore .manageStoreText h2 {
+    font-size: clamp(30px, 4vw, 70px);
+  }
+  .footerMenu .pageLinks ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footerMenu .pageLinks ul li {
+    padding: 0;
+  }
+  .transformStoreCarts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .transformStoreCarts .cart {
+    max-width: 100%;
+    width: 100%;
+  }
+  .contactSection {
+    margin-bottom: 20px;
+  }
+  .footerMenu .ready, .footerMenu .pageLinks, .footerMenu .contact, .footerMenu .socialMedia {
+    max-width: 100%;
+    width: 100%;
+  }
+  .contact {
+    -webkit-box-ordinal-group: 5 !important;
+        -ms-flex-order: 4 !important;
+            order: 4 !important;
+  }
+  .socialMedia {
+    -webkit-box-ordinal-group: 4 !important;
+        -ms-flex-order: 3 !important;
+            order: 3 !important;
+  }
+  .socialMedia ul li {
+    padding: 0 !important;
+  }
+  .manageStoreText {
+    letter-spacing: 5px;
+  }
+  .yellowButton, .stickButton, .footerMenu .contact .contactSection div:nth-child(2) .whiteButton {
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
+  .advantage {
+    justify-items: center;
+    -ms-grid-columns: (1fr)[1] !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+    -ms-grid-rows: (1fr)[1] !important;
+    grid-template-rows: repeat(1, 1fr) !important;
+  }
+  .advantage > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .advantage .advantageTitle h2 {
+    text-align: center;
+  }
+  .advantage .advantageDesc {
+    max-width: 400px;
+    text-align: center;
+  }
+  .advantage .advantageDesc p {
+    margin-bottom: 15px;
+  }
 }

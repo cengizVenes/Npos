@@ -53,7 +53,7 @@
   display: inline-block;
   color: $headerBgColor;
   font: {
-    size: 18px;
+    size: clamp(12px, 1.8vw, 18px);
     weight: 500;
   }
   border: none;
@@ -106,7 +106,7 @@
   span {
     margin-left: 15px;
     font-weight: 600;
-    font-size: 18px;
+    font-size: clamp(12px, 1.8vw, 18px);
     letter-spacing: 1px;
   }
 }
@@ -115,7 +115,7 @@
   margin: 50px 0 0 50px;
   h2 {
     max-width: 90%;
-    font-size: 70px;
+    font-size: clamp(20px, 4vw, 70px);
     line-height: 1.2;
     position: relative;
     color: $headerBgColor;
@@ -141,9 +141,9 @@
 // description
 .description {
   text-align: center;
-  margin: 200px 200px 150px 85px;
+  margin: 200px 142px 150px 142px;
   h3 {
-    font-size: 42px;
+    font-size: clamp(20px, 2.5vw, 45px);
     line-height: 1.2;
     color: $headerBgColor;
     letter-spacing: 2px;
@@ -174,8 +174,8 @@
   margin-top: 75px;
   h2 {
     color: $whiteColor;
-    letter-spacing: 15px;
-    font-size: 70px;
+    letter-spacing: 1vw;
+    font-size: clamp(30px, 3vw, 70px);
     max-width: 1000px;
     line-height: 1.2;
   }
@@ -231,13 +231,14 @@
       margin-top: 60px;
       h3 {
         color: $whiteColor;
-        font-size: 35px;
+        font-size: clamp(18px, 2vw, 35px);
         letter-spacing: 3px;
       }
       p {
         color: $infoDesc;
         margin: 20px 0 0 0;
         line-height: 1.2;
+        font-size: clamp(14px, 1.6vw, 21px);
       }
     }
   }
@@ -246,6 +247,7 @@
   border-radius: 20px;
   padding: 50px;
   background-color: $ourPlatformColor;
+  max-width: 400px;
   p {
     color: $whiteColor;
     font-size: 25px;
@@ -385,13 +387,16 @@
   div {
     &:last-child {
       @extend %flexCenter;
+      img {
+        width: 100%;
+      }
     }
   }
   h2 {
     max-width: 1090px;
     text-align: center;
     color: $whiteColor;
-    font-size: 70px;
+    font-size: clamp(30px, 4vw, 70px);
     letter-spacing: 10px;
   }
 }
@@ -424,9 +429,10 @@
         background-color: $transparent;
       }
       h3 {
-        font-size: 25px;
+        font-size: clamp(16px, 2.5vw, 25px);
         letter-spacing: 1px;
         position: relative;
+        padding-right: 30px;
         &::after {
           content: "";
           display: block;
@@ -458,7 +464,7 @@
       transition: 0.5s;
       p {
         padding-top: 40px;
-        font-size: 20px;
+        font-size: clamp(12px, 2.5vw, 20px);
         line-height: 1.2;
         color: $headerBgColor;
       }
@@ -469,7 +475,7 @@
 %footerFeature {
   background-color: $headerBgColor;
   border-radius: 20px;
-  padding: 40px;
+  padding: 30px;
   color: $whiteColor;
 }
 .footerMenu {
@@ -478,12 +484,12 @@
   gap: 20px;
   margin-bottom: 96px;
   .ready {
-    max-width: 400px;
+    max-width: 500px;
     @extend %footerFeature;
     @extend %flexCenter;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
+    gap: 30px;
     div {
       &:first-child {
         width: calc(30% - 20px);
@@ -497,7 +503,7 @@
       &:nth-child(2) {
         width: calc(70% - 20px);
         h2 {
-          font-size: 38px;
+          font-size: clamp(18px, 2.5vw, 38px);
           letter-spacing: 5px;
           line-height: 1.2;
         }
@@ -522,9 +528,15 @@
     li {
       padding: 15px 0;
       text-align: center;
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
       a {
         color: $whiteColor;
-        font-size: 18px;
+        font-size: clamp(12px, 2.5vw, 18px);
         letter-spacing: 1px;
       }
     }
@@ -536,7 +548,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 640px;
+    max-width: 700px;
 
     .contactSection {
       display: flex;
@@ -550,14 +562,14 @@
         &:first-child {
           width: calc(60% - 20px);
           h2 {
-            font-size: 50px;
+            font-size: clamp(20px, 2.5vw, 50px);
             letter-spacing: 5px;
             margin-bottom: 20px;
           }
           p {
             color: $footerLinkColor;
             max-width: 315px;
-            font-size: 17px;
+            font-size: clamp(12px, 2.5vw, 16px);
             line-height: 1.3;
             letter-spacing: 1px;
           }
@@ -581,6 +593,7 @@
           }
           a {
             color: $loginBgColor;
+            font-size: clamp(12px, 2.5vw, 16px);
           }
         }
       }
@@ -601,7 +614,7 @@
         }
         a {
           color: $whiteColor;
-          font-size: 18px;
+          font-size: clamp(14px, 2.5vw, 18px);
           letter-spacing: 1px;
         }
       }
@@ -627,3 +640,8 @@
     }
   }
 }
+.mobilMenu {
+  display: none;
+  @extend .logo;
+}
+@import "responsive";

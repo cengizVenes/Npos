@@ -1,13 +1,17 @@
 $(".referenceCarousel").owlCarousel({
   loop: true,
   margin: 10,
-  nav: true,
+  nav: false,
+  dots:false,
   responsive: {
     0: {
-      items: 1,
+      items: 3,
+    },
+    400: {
+      items: 4,
     },
     600: {
-      items: 3,
+      items: 6,
     },
     1000: {
       items: 8,

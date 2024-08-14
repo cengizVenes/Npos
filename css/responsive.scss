@@ -1,0 +1,322 @@
+// 1400px window width
+@media (max-width: 1400px) {
+  .littleNote {
+    div {
+      width: 55px;
+      height: 55px;
+    }
+  }
+  .reference {
+    div {
+      img {
+        padding: 0 20px;
+      }
+    }
+  }
+  .footerMenu {
+    flex-wrap: wrap;
+    .ready {
+      max-width: calc(40% - 20px);
+      width: 100%;
+    }
+    .pageLinks {
+      max-width: calc(60% - 20px);
+      width: 100%;
+      order: 3;
+      ul {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        li {
+          padding: 0 20px;
+          a {
+            line-height: 0;
+          }
+        }
+      }
+    }
+    .socialMedia {
+      ul {
+        flex-direction: row;
+        li {
+          padding: 0 20px;
+        }
+      }
+      order: 4;
+    }
+    .contact {
+      order: 2;
+    }
+  }
+}
+
+// 1200px window width
+@media (max-width: 1200px) {
+  .manageStoreImg {
+    div {
+      width: 80%;
+    }
+  }
+  .description {
+    margin: 150px 142px;
+  }
+  h2 {
+    .littleNote {
+      margin-left: 35px !important;
+      margin-top: 5px !important;
+    }
+  }
+  .transformStoreCarts {
+    .cart {
+      max-width: 50%;
+      width: 100%;
+      &:last-child {
+        margin-top: -100px;
+        max-height: 500px;
+      }
+    }
+    img {
+      width: 75%;
+    }
+  }
+  .transformStore {
+    p {
+      max-width: 550px;
+      font-size: 15px;
+      margin: 30px 0;
+    }
+    h2 {
+      max-width: 80%;
+    }
+  }
+  .advantage {
+    .advantageTitle {
+      h2 {
+        font-size: 35px;
+      }
+    }
+    .advantageDesc {
+      padding: 35px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      p {
+        font-size: 14px;
+        margin: 0;
+      }
+    }
+  }
+  %baseCart {
+    div {
+      &:first-child {
+        padding: 20px !important;
+        img {
+          max-width: 20px !important;
+          max-height: 20px !important;
+        }
+      }
+      &:last-child {
+        span {
+          font-size: 50px !important;
+        }
+      }
+    }
+    padding: 35px;
+    p {
+      font-size: 14px;
+    }
+  }
+}
+// 992px window width
+@media (max-width: 992px) {
+  .transformStoreCarts {
+    margin-top: 45px;
+    .cart {
+      &:last-child {
+        max-height: 440px !important;
+      }
+    }
+  }
+  .transformStore {
+    padding: 50px;
+    h3 {
+    }
+  }
+  .cart {
+    .cartBody {
+      margin-top: 40px !important;
+    }
+  }
+  .cart {
+    .cartHeader {
+      &::after {
+        width: 75% !important;
+        bottom: -15px !important;
+      }
+    }
+  }
+  .littleNote {
+    div {
+      max-width: 45px;
+      max-height: 45px;
+      img {
+        max-width: 15px;
+      }
+    }
+  }
+  h2 {
+    .littleNote {
+      margin-left: 10px !important;
+      margin-top: 0 !important;
+    }
+  }
+  .container {
+    padding: 0 24px;
+  }
+  .advantage {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .headerMenu {
+    display: none !important;
+  }
+  .mobilMenu {
+    display: block;
+  }
+  .description {
+    margin: 100px 32px;
+  }
+}
+// 768px window width
+@media (max-width: 768px) {
+  .faq {
+    padding: 50px 20px 0;
+    .faqBody {
+      margin: 40px 0;
+    }
+  }
+  .accordion {
+    .accordionHeader {
+      padding: 25px 0 !important;
+      h3 {
+        &::after {
+          width: 20px !important;
+          height: 20px !important;
+        }
+      }
+    }
+    .accordionBody {
+      p {
+        padding: 25px 6px 0 !important;
+      }
+    }
+  }
+  .transformStoreCarts {
+    align-items: center;
+    gap: 25px;
+    .cart {
+      &:last-child {
+        margin: 0;
+      }
+      width: 70%;
+    }
+  }
+  .manageStoreText {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  .yellowButton {
+    padding: 15px 25px;
+  }
+  .manageStore {
+    margin-top: 40px;
+  }
+  .manageStoreButtons {
+    margin-top: 25px !important;
+  }
+  .description {
+    margin: 75px 32px;
+  }
+}
+// 576 window width
+@media (max-width: 567px) {
+  .littleNote {
+    div {
+      max-width: 40px;
+      max-height: 40px;
+    }
+  }
+  .manageStore {
+    flex-direction: column;
+    align-items: center;
+    .manageStoreText {
+      margin: 0;
+      max-width: 265px;
+      width: 100%;
+      margin-bottom: 30px;
+      h2 {
+        font-size: clamp(30px, 4vw, 70px);
+      }
+    }
+  }
+  .footerMenu {
+    .pageLinks {
+      ul {
+        justify-content: space-between;
+        li {
+          padding: 0;
+        }
+      }
+    }
+  }
+  .transformStoreCarts {
+    flex-direction: column;
+    .cart {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  .contactSection {
+    margin-bottom: 20px;
+  }
+  %footerFeature {
+    max-width: 100%;
+    width: 100%;
+  }
+  .contact {
+    order: 4 !important;
+  }
+  .socialMedia {
+    order: 3 !important;
+    ul {
+      li {
+        padding: 0 !important;
+      }
+    }
+  }
+  .manageStoreText {
+    letter-spacing: 5px;
+  }
+  .yellowButton {
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
+  .advantage {
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-rows: repeat(1, 1fr) !important;
+
+    .advantageTitle {
+      h2 {
+        text-align: center;
+      }
+    }
+    .advantageDesc {
+      max-width: 400px;
+      text-align: center;
+      p {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
