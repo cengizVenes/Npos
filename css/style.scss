@@ -641,7 +641,9 @@
   }
 }
 .mobilMenu {
-  display: none;
   @extend .logo;
+
+  display: none !important;
+
 }
 @import "responsive";

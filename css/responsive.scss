@@ -129,6 +129,9 @@
 }
 // 992px window width
 @media (max-width: 992px) {
+  .mobilMenu {
+    display: flex !important;
+  }
   .transformStoreCarts {
     margin-top: 45px;
     .cart {
