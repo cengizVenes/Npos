@@ -129,6 +129,15 @@
 }
 // 992px window width
 @media (max-width: 992px) {
+  .logo {
+    padding: 15px !important;
+    border-radius: 15px !important;
+
+    img {
+      width: 25px !important;
+      height: 25px !important;
+    }
+  }
   .mobilMenu {
     display: flex !important;
   }
@@ -243,6 +252,38 @@
 }
 // 576 window width
 @media (max-width: 567px) {
+  .faq {
+    padding: 50px 0;
+  }
+  .innovation {
+    margin-top: 50px;
+    padding: 20px 20px 0;
+    h2 {
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+    div {
+      &:nth-child(2) {
+        margin: 20px 0 30px;
+        justify-content: space-between;
+      }
+    }
+    .stickButton {
+      margin: 0 !important;
+      padding: 10px;
+      img {
+        max-width: 10px;
+      }
+    }
+  }
+  .transformStore {
+    padding: 25px;
+  }
+  .transformStoreCarts {
+    .cart {
+      padding: 20px;
+    }
+  }
   .littleNote {
     div {
       max-width: 40px;

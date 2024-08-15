@@ -1120,6 +1120,14 @@ textarea {
   }
 }
 @media (max-width: 992px) {
+  .logo, .header .headerMenu, .mobilMenu {
+    padding: 15px !important;
+    border-radius: 15px !important;
+  }
+  .logo img, .header .headerMenu img, .mobilMenu img {
+    width: 25px !important;
+    height: 25px !important;
+  }
   .mobilMenu {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -1234,6 +1242,36 @@ textarea {
   }
 }
 @media (max-width: 567px) {
+  .faq {
+    padding: 50px 0;
+  }
+  .innovation {
+    margin-top: 50px;
+    padding: 20px 20px 0;
+  }
+  .innovation h2 {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  .innovation div:nth-child(2) {
+    margin: 20px 0 30px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .innovation .stickButton {
+    margin: 0 !important;
+    padding: 10px;
+  }
+  .innovation .stickButton img {
+    max-width: 10px;
+  }
+  .transformStore {
+    padding: 25px;
+  }
+  .transformStoreCarts .cart {
+    padding: 20px;
+  }
   .littleNote div {
     max-width: 40px;
     max-height: 40px;
